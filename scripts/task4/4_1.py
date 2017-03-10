@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-info=raw_input('enter information\n')
+#info=raw_input('enter information\n')
+info="192.168.10.0/24"
 net=info.split("/")[0]
 mask=info.split("/")[1]
 
 
-print "Network:"
-print "{:10} {:10} {:10} {:10} \n{:10} {:10} {:10} {:10}".format(net.split(".")[0], net.split(".")[1], net.split(".")[2], net.split(".")[3], bin(int(net.split(".")[0]))[2:].zfill(10), bin(int(net.split(".")[1]))[2:].zfill(10), bin(int(net.split(".")[2]))[2:].zfill(10), bin(int(net.split(".")[3]))[2:].zfill(10))
+#print "Network:"
+#print "{:10} {:10} {:10} {:10} \n{:10} {:10} {:10} {:10}".format(net.split(".")[0], net.split(".")[1], net.split(".")[2], net.split(".")[3], bin(int(net.split(".")[0]))[2:].zfill(10), bin(int(net.split(".")[1]))[2:].zfill(10), bin(int(net.split(".")[2]))[2:].zfill(10), bin(int(net.split(".")[3]))[2:].zfill(10))
 
 
 
@@ -16,3 +17,9 @@ print "{:10} {:10} {:10} {:10} \n{:10} {:10} {:10} {:10}".format(net.split(".")[
 
 
 # bin(int(net.split(".")[0]))[2:].zfill(10)
+
+
+
+
+ for i in range(32,0,-1):
+     print 'interface FastEthernet0/' + str(i)
