@@ -34,7 +34,16 @@ london_co = {
 
 
 tuple_keys=tuple(london_co[device].keys())
-print ("enter parameter name {:<30}:\n").format(tuple_keys)
+string_keys=""
+for i in london_co[device].keys():
+	string_keys+=(i+",")
+	
+	
+print string_keys
+
+
+
+#print ("enter parameter name {:<30}:\n").format(tuple_keys)
 #param=raw_input('enter parameter name {:<30}:\n').format(tuple_keys)
 
 #print list_keys
