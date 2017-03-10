@@ -18,21 +18,23 @@ for i in range(0,32,1):
 	else:
 		stringmask+="0"
 	stringnet+=str(int(stringaddress[i]) * int(stringmask[i]))
+	
+print net
 
 
 print "Network:"
-print "{:10} {:10} {:10} {:10}".format(net.split(".")[0], net.split(".")[1], net.split(".")[2], net.split(".")[3])
-print "{:10} {:10} {:10} {:10}\n".format(bin(int(net.split(".")[0]))[2:].zfill(8), bin(int(net.split(".")[1]))[2:].zfill(8), bin(int(net.split(".")[2]))[2:].zfill(8), bin(int(net.split(".")[3]))[2:].zfill(8))
+#print "{:10} {:10} {:10} {:10}".format(net.split(".")[0], net.split(".")[1], net.split(".")[2], net.split(".")[3])
+#print "{:10} {:10} {:10} {:10}\n".format(bin(int(net.split(".")[0]))[2:].zfill(8), bin(int(net.split(".")[1]))[2:].zfill(8), bin(int(net.split(".")[2]))[2:].zfill(8), bin(int(net.split(".")[3]))[2:].zfill(8))
+print "{:<10} {:<10} {:<10} {:<10}".format(int(stringnet[0:8],2), int(stringnet[8:16],2), int(stringnet[16:24],2), int(stringnet[24:32],2))
+print "{:<10} {:<10} {:<10} {:<10}".format(stringnet[0:8], stringnet[8:16], stringnet[16:24], stringnet[24:32])	
 print "Mask:"
 print "/{}".format(mask)
 print "{:<10} {:<10} {:<10} {:<10}".format(int(stringmask[0:8],2), int(stringmask[8:16],2), int(stringmask[16:24],2), int(stringmask[24:32],2))
 print "{:<10} {:<10} {:<10} {:<10}".format(stringmask[0:8], stringmask[8:16], stringmask[16:24], stringmask[24:32])	
+
+
 #print stringaddress
 #print stringmask
-
-#for i in range(0,32,1):
-#	stringnet2+=str(int(stringaddress[i]) * int(stringmask[i]))
-
 
 #from subprocess import call
 #call('ls')
